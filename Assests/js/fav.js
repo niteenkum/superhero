@@ -1,7 +1,9 @@
 
+/* The above code is adding the favourite heros to the page if avaialbe else showing svg */
 printAllFavHero = () => {
     document.getElementById('fav').innerHTML = "";
     let favs = JSON.parse(localStorage.getItem("favs")) || [];
+/* The below code is adding the favourite heros to the page if avaialbe else showing svg */
 if(favs.length > 0){
     favs.forEach(fav => {
     document.getElementById('fav').innerHTML += `
@@ -24,6 +26,7 @@ else{
 
 }
 printAllFavHero();
+/* This is a function that is removing the hero from the favourite list. */
 removeHero = (id) => {
     console.log(id);
     let favList = JSON.parse(localStorage.getItem("favs")) || [];

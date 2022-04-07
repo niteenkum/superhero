@@ -1,6 +1,7 @@
 var id = window.location.search;
 id = id.replace('?', "");
-// const superHeroWiki = document.getElementById('super-hero-wiki');
+    /* The above code is fetching the data from the API and displaying it in the browser. */
+
 var xhrRequest = new XMLHttpRequest();
 xhrRequest.open("GET", "https://www.superheroapi.com/api.php/1662238257453184//"+id, true);
 xhrRequest.send();

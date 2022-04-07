@@ -1,3 +1,4 @@
+/* Defining the width, padding and border of the `super-hero-card` element. */
 .super-hero-card{
     width: 320px;
     padding: 10px;
@@ -12,6 +13,8 @@
     border: 2px solid #fff;
 }
 
+/* Defining the font-size, font-weight, color, text-align, background-color, height and width of the
+`super-hero-name` element. */
 .super-hero-name{
     font-size: 1rem;
     /* line-height: 0.4rem; */
@@ -23,12 +26,14 @@
     width: 100%;
 }
 
+/* Defining the font-size, font-weight, color, and text-align of the `.movie-name` element. */
 .movie-name{
     font-size: 0.8rem;
     font-weight: normal;
     color: black;
 }
 
+/* Defining the font-size, font-weight, color, and text-align of the `.movie-name` element. */
 .publication-information p{
     font-size: 1rem;
     font-weight: bold;
@@ -37,6 +42,8 @@
     height: 30px;
     width: 100%;
 }
+
+/* Defining the width and height of the `.publisher-details` element. */
 .publisher-details{
     width: 100%;
     height: 40px;

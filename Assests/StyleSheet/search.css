@@ -1,3 +1,4 @@
+/* A CSS code for the header. */
 #header{
 height: 10vh;
 width: 100%;
@@ -10,6 +11,7 @@ z-index: 1;
 
 }
 
+/* This is a CSS code for the search bar. */
 #search-bar{
     width: 40%;
     height: 44px;
@@ -18,6 +20,7 @@ z-index: 1;
     box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
     border-radius: 24px;
 }
+/* Making the input box in the search bar to be 100% width and 100% height. */
 
 #search-bar input{
     width: 100%;
@@ -25,6 +28,7 @@ z-index: 1;
     border: none;
     border-radius: 24px;
 }
+/* Making the input box in the search bar to be 100% width and 100% height. */
 
 #search-bar input:focus{
     outline: none;
@@ -45,6 +49,7 @@ z-index: 1;
 a{
     text-decoration: none;
 }
+/* This is a CSS code for the search result card. */
 .search-result-card{
 height: 140px;
 width: 40%;
@@ -52,6 +57,8 @@ background: #fff;
 border-top: 1px solid #ecedef;
 }
 
+/* This is a CSS code that changes the background of the search result card when the mouse hovers over
+it. */
 .search-result-card:hover{
     cursor: pointer;
     background: #e9e3e370;
@@ -63,6 +70,7 @@ height: 100%;
 width: 200px;
 border-radius: 20px;
 }
+/* A CSS code that changes the color of heart of the search result card when the mouse hovers over it. */
 .search-result-card .favourite{
     height: 15px;
     width: 15px;    

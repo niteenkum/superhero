@@ -1,9 +1,11 @@
 const hero = document.getElementById('search-super-hero');
 const search = document.getElementById('results');
+/* The below code is used to get the super hero character from the superher api. */
 hero.addEventListener('keyup', (e) => {
     const search = e.target.value;
 
-   if(search.length > 0){
+   /* The above code is used to get the search results from the API. if search value is greater than 1*/
+   if(search.length > 1){
     var xhrRequest = new XMLHttpRequest();
     xhrRequest.open("GET", "https://www.superheroapi.com/api.php/1662238257453184/search/"+search, true);
     xhrRequest.send();
@@ -15,10 +17,11 @@ hero.addEventListener('keyup', (e) => {
             document.getElementById('results').innerHTML = `   <img height="300" width="300" class="favourite" src="./Assests/Images/no_data_found.svg" > NO DATA FOUND`
             return;
         }
-         if(searchResults.length > 3){
+         if(searchResults.length > 0){
             document.getElementById('results').innerHTML = ""
          localStorage.setItem("searchResults", JSON.stringify(searchResults));
 
+    /* The above code is used to add the search results to the search results section. */
     for(let i of searchResults){
         document.getElementById('results').innerHTML += `
          
@@ -43,16 +46,18 @@ hero.addEventListener('keyup', (e) => {
    }
 });
 
+/* This is a function that is used to add the favourite character to the local storage. */
 addHero = (id) => {
     let searchResult = JSON.parse(localStorage.getItem("searchResults"));
     let fav = searchResult.find(item => item.id == id)
     let addInFav = [];
     addInFav.push({id:fav.id,speed:fav.powerstats.speed, image:fav.image.url,name:fav.name });
-    // addInFav.push({name:fav.name});
-    // addInFav.push({image:fav.image.url});
-    // addInFav.push({speed:fav.powerstats.speed});
+
+/* This is a ternary operator. It is used to check if the local storage is empty or not. If it is empty
+then it will return an empty array. */
     let favs = JSON.parse(localStorage.getItem("favs")) || [];
-    console.log("Faviourite",favs)
+
+ /* Adding the favourite character to the local storage. */
     if(favs.length > 0){
         let isFav = favs.find(item => item.id == id)
         if(isFav){
